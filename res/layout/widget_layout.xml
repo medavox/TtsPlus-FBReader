@@ -24,7 +24,6 @@
                    android:paddingRight="2dp"
                 />
         <TextView android:id="@+id/book_info"
-                android:textColor="@color/lltgray"
                 android:textSize="18dp"
                 android:paddingTop="4dp"
                 android:layout_width="match_parent"

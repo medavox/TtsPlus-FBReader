@@ -41,9 +41,7 @@
                   android:configChanges="orientation|screenSize|keyboardHidden"
                  >
         </activity>
-        <activity android:name=".CmdActivity"
-                  android:theme="@style/NoAnimDialog"
-                >
+        <activity android:name=".CmdActivity">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <action android:name="com.hyperionics.fbreader.plugin.tts_plus.COPY_SPEECH_FILES" />
