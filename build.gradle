@@ -24,7 +24,6 @@ ext {
     USE_SDK_VERSION = 27
     targetSdk = 25
     IS_BETA = 'false'
-    BUILD_DATE = new Date().format('yyyy_MM_dd')
 }
 
 android {
@@ -65,23 +64,11 @@ android {
     }
 
     signingConfigs {
-        release {
-            storeFile file(System.getenv("KEYSTORE_FILE"))
-            storePassword System.getenv("KEYSTORE_PASSWORD")
-            keyAlias System.getenv("KEY_ALIAS")
-            keyPassword System.getenv("KEY_PASSWORD")
-        }
+
     }
 
     buildTypes {
-        release {
-            signingConfig signingConfigs.release
-        }
-        debug {
-            signingConfig signingConfigs.release
-            debuggable true
-            jniDebuggable true
-        }
+
     }
 
 }
@@ -90,6 +77,4 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "com.android.support:appcompat-v7:$support_library_version"
     implementation "com.android.support:support-v4:$support_library_version"
-    implementation project(':TtsSetup')
-    implementation project(':TtsNativeLibSmall')
 }
